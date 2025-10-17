@@ -47,7 +47,7 @@ for (const btn of copyBtns) {
     const number = numberEl.innerText;
 
     navigator.clipboard.writeText(number);
-    alert(` নম্বর কপি হয়েছে :. ${number}` );
+    alert(`©️ নম্বর কপি হয়েছে :- ${number} 👌` );
 
     data.numCopy++;
 
@@ -57,38 +57,38 @@ for (const btn of copyBtns) {
 }
 
 // call btn
-// callBtns
+// 
 
-// for(const btn of callBtns) {
+for(const btn of callBtns) {
 
-//   btn.addEventListener('click', (e) => {
+  btn.addEventListener('click', (e) => {
 
-//     const parent = e.target.closest(".service");
-//     const name = parent.querySelector(".service-name").innerText;
-//     const number = parent.querySelector(".service-number").innerText;
+    const parent = e.target.closest(".service");
+    const name = parent.querySelector(".service-name").innerText;
+    const number = parent.querySelector(".service-number").innerText;
 
-//     if (data.numCoin < 20) {
+    if (data.numCoin < 20) {
 
-//       alert("❌ আপনার পর্যাপ্ত কয়েন নেই ! কল করতে কমপক্ষে ২০ কয়েন লাগবে। ✖️");
+      alert("❌ আপনার পর্যাপ্ত কয়েন নেই ! কল করতে কমপক্ষে ২০ কয়েন লাগবে। ‼️❕✖️");
 
-//       return;
-
-
-
-//     }
-
-//     data.numCoin -= 20;
-//     coinDisplay.innerText = data.numCoin;
-
-//     const currentTime = new Date().toLocaleTimeString();
-//     data.callHistory.push({name, number, time: currentTime});
-
-//     renderCallHistory();
-//     alert(`📞.. Calling ${name} ${number}...`);
-//   });
+      return;
 
 
-// }
+
+    }
+
+    data.numCoin -= 20;
+    coinDisplay.innerText = data.numCoin;
+
+    const currentTime = new Date().toLocaleTimeString();
+    data.callHistory.push({name, number, time: currentTime});
+
+    renderCallHistory();
+    alert(`📞.. Calling ${name} ${number}...`);
+  });
+
+
+}
 
 //* Render-call-history
 
